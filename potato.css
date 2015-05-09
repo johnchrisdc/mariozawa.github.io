@@ -45,3 +45,25 @@ body{
 	content:url("jcdc_logo_hover.png");
 	
 }
+
+footer{
+		position:fixed;	
+		bottom:0px;
+		width:100%;
+}
+
+#footer{
+	text-align:center;
+}
+
+#potato_link{
+	color:#395ec6;
+}
+
+#android{
+	color:#a4c639;
+}
+
+#xda{
+	color:#996633;
+}
