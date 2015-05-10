@@ -1,7 +1,25 @@
+@font-face {
+  font-family: 'Akkurat Pro';
+  src: url('fonts/AkkBd_Pro_1.eot'); /* IE9 Compat Modes */
+  src: url('fonts/AkkBd_Pro_1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/AkkBd_Pro_1.woff') format('woff'), /* Modern Browsers */
+       url('fonts/AkkBd_Pro_1.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/AkkBd_Pro_1.svg#8e4ac6878de559e681f53263f7ebda33') format('svg'); /* Legacy iOS */
+  font-style:   normal; font-weight:  700;}
+
+@font-face {
+  font-family: 'Akkurat Light Pro';
+  src: url('fonts/AkkLg_Pro_1.eot'); /* IE9 Compat Modes */
+  src: url('fonts/AkkLg_Pro_1.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/AkkLg_Pro_1.woff') format('woff'), /* Modern Browsers */
+       url('fonts/AkkLg_Pro_1.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/AkkLg_Pro_1.svg#b5c01d1b960fd3c923f4c0466bcdd227') format('svg'); /* Legacy iOS */
+  font-style:   normal; font-weight:  200; }  
+  
 body{
 	margin:0px;
-	background-image:url("bg.png");
-	font-family:"Roboto", sans-serif;
+/*	background-image:url("bg.png"); */
+	font-family:"Akkurat Pro", sans-serif;
 }
 
 #header{
@@ -22,13 +40,14 @@ body{
 #link{
 	text-decoration:none;
 	color:white;
-	font-weight:bold;
+	font-weight:normal;
 	margin:2px;
 	font-size:15px;
+	
 }
 
 #link:hover{
-	color:red;
+	color:#6666ff;
 }
 
 #poem{
@@ -57,13 +76,13 @@ footer{
 }
 
 #potato_link{
-	color:#395ec6;
+	color:#3366ff;
 }
 
 #android{
-	color:#a4c639;
+	color:#ff6666;
 }
 
 #xda{
-	color:#996633;
+	color:#665858;
 }
