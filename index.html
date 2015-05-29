@@ -6,6 +6,8 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 	<link rel = "stylesheet" href = "style.css" type = "text/css"/>
 	
+	<link rel="icon" type="image/png" href="res/fav_ico.png">
+	
 	<script type = "text/javascript">
 		$(function(){
 			$("#toggle_drawer").toggle(showDrawer, hideDrawer);
@@ -14,13 +16,24 @@
 		function hideDrawer(evt){
 			$("#drawer").animate({width:"0px"},600);
 			$("#content").slideUp( 300 ).delay(400).fadeIn(400);
+			
+			var delay=400; //1 seconds
+
+			setTimeout(function(){
 			$("#toggle_drawer").attr("src", "res/ic_menu_black_18dp.png");
+				$("#home").attr("src", "res/jcdc_logo_normal.png");
+			}, delay); 
+			
+			
+			
 		}
 		
 		function showDrawer(evt){
 			$("#drawer").animate({width:"50%"},600);
 			$("#content").slideUp(300).delay( 800 );
-			$("#toggle_drawer").attr("src", "res/ic_close_black_18dp.png");
+			
+			$("#toggle_drawer").attr("src", "res/ic_close_white_18dp.png");
+			$("#home").attr("src", "res/jcdc_logo_normal_white.png");
 		}
 		
 	</script>
@@ -30,8 +43,9 @@
 <body>
 	<div id="header">
 		<img id="toggle_drawer" src="res/ic_menu_black_18dp.png" />
-		
-		<img id="home" src="res/jcdc_logo_normal.png" />
+		<a href="" >
+			<img id="home" src="res/jcdc_logo_normal.png" />
+		</a>
 	</div>
 	
 	<div id="content" >
@@ -47,22 +61,22 @@
 			<div id="links" >
 				<a id="navLinks" href="" > Home </a>
 				<br/><br/>
-				<a id="navLinks" href="https://www.facebook.com/RadioActivePotatoProject" > PotatoInc </a>
+				<a id="navLinks" target="_blank" href="https://www.facebook.com/RadioActivePotatoProject" > PotatoInc </a>
 				<br/><br/>
-				<a id="navLinks" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838" > PotatoCM </a>
+				<a id="navLinks" target="_blank" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838" > PotatoCM </a>
 			</div>
 		
 		</div>
 		
 		<div id="drawer_bottom" > 
 			<br/><br/>
-			<a id="navLinks" href="https://www.facebook.com/johnchrisdelacruz" > Facebook </a>
+			<a id="navLinks" target="_blank" href="https://www.facebook.com/johnchrisdelacruz" > Facebook </a>
 			<br/><br/>
-			<a id="navLinks" href="https://plus.google.com/+JohnChrisDelaCruz69/posts" > Google+ </a>
+			<a id="navLinks" target="_blank" href="https://plus.google.com/+JohnChrisDelaCruz69/posts" > Google+ </a>
 			<br/><br/>
-			<a id="navLinks" href="https://github.com/mariozawa" > Github </a>
+			<a id="navLinks" target="_blank" href="https://github.com/mariozawa" > Github </a>
 			<br/><br/>
-			<a id="navLinks" href="http://forum.xda-developers.com/member.php?u=4715592" > xda-developers </a>
+			<a id="navLinks" target="_blank" href="http://forum.xda-developers.com/member.php?u=4715592" > xda-developers </a>
 		</div>
 		
 		
