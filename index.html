@@ -1,40 +1,74 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="potato.css">
-	<link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+	<title> JCDC </title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	<link rel = "stylesheet" href = "style.css" type = "text/css"/>
 	
-	<title> Eow World! </title>
-
-</head>
-
-<body>
-
-	<div id="header" >
-		<a href="index.html" > <img id="logo" src="jcdc_logo_normal.png" /> </a>
+	<script type = "text/javascript">
+		$(function(){
+			$("#toggle_drawer").toggle(showDrawer, hideDrawer);
+		});
 		
-		<div id="menu" >
-			<a target="_blank" href="https://www.facebook.com/RadioActivePotatoProject" id="link" > POTATOINC </a>
-			<a target="_blank" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838" id="link" > POTATOCM </a>
-		</div>
+		function hideDrawer(evt){
+			$("#drawer").animate({width:"0px"},600);
+			$("#content").slideUp( 300 ).delay(400).fadeIn(400);
+			$("#toggle_drawer").attr("src", "res/ic_menu_black_18dp.png");
+		}
+		
+		function showDrawer(evt){
+			$("#drawer").animate({width:"50%"},600);
+			$("#content").slideUp(300).delay( 800 );
+			$("#toggle_drawer").attr("src", "res/ic_close_black_18dp.png");
+		}
+		
+	</script>
 	
+	
+</head>
+<body>
+	<div id="header">
+		<img id="toggle_drawer" src="res/ic_menu_black_18dp.png" />
+		
+		<img id="home" src="res/jcdc_logo_normal.png" />
 	</div>
 	
-	<h1 id="poem" > John Chris Dela Cruz </h1>
-	<h5 id="lolz" > Android developer extraordinaire. </h5>
+	<div id="content" >
+		<img src="res/dp.jpg" />
+		<h1 id="lol" > John Chris Dela Cruz </h1>
+	</div>
 	
-	<br/><br/>
+
+	<div id="drawer">
+
+		<div id="drawer_top" > 
+		
+			<div id="links" >
+				<a id="navLinks" href="" > Home </a>
+				<br/><br/>
+				<a id="navLinks" href="https://www.facebook.com/RadioActivePotatoProject" > PotatoInc </a>
+				<br/><br/>
+				<a id="navLinks" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838" > PotatoCM </a>
+			</div>
+		
+		</div>
+		
+		<div id="drawer_bottom" > 
+			<br/><br/>
+			<a id="navLinks" href="https://www.facebook.com/johnchrisdelacruz" > Facebook </a>
+			<br/><br/>
+			<a id="navLinks" href="https://plus.google.com/+JohnChrisDelaCruz69/posts" > Google+ </a>
+			<br/><br/>
+			<a id="navLinks" href="https://github.com/mariozawa" > Github </a>
+			<br/><br/>
+			<a id="navLinks" href="http://forum.xda-developers.com/member.php?u=4715592" > xda-developers </a>
+		</div>
+		
+		
+	</div>
 	
-	<h5 id="lolz" > Recognized Themer at <a id="xda" target="_blank" href="http://forum.xda-developers.com/member.php?u=4715592" > XDA-developers </a> </h5>
-	<h5 id="lolz" > Currently developing <span id="android" > Android </span> stuffs in <a target="_blank" href="https://www.facebook.com/RadioActivePotatoProject" id="potato_link" > PotatoInc </a> as a hobby </h5>
-	<h5 id="lolz" > Focused mainly in modifying <a id="android" target="_blank" href="https://source.android.com/" > AOSP <a> source code </h5>
-	
-<footer>
-	<h6 id="footer" >
-    	&copy Another Potato Project.
-    </h6>
-</footer>
-	
+
 </body>
 
 </html>
