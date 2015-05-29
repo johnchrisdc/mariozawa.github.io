@@ -91,3 +91,8 @@ div#header{
     line-height: 16px;
     text-transform: uppercase;
 }
+
+#dp{
+	margin-left:auto;
+	margin-right:auto;
+}
