@@ -1,0 +1,123 @@
+<html>
+
+<head>
+	<title> JCDC </title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+	<link rel = "stylesheet" href = "style.css" type = "text/css"/>
+	
+	<link rel="icon" type="image/png" href="res/fav_ico.png">
+	
+	<script type = "text/javascript">
+		$(function(){
+			$("#toggle_drawer").toggle(showDrawer, hideDrawer);
+		});
+		
+		function hideDrawer(evt){
+			$("#drawer").animate({width:"0px"},600);
+			$("#content").slideUp( 300 ).delay(400).fadeIn(400);
+			
+			var delay=400; //1 seconds
+
+			setTimeout(function(){
+			$("#toggle_drawer").attr("src", "res/ic_menu_black_18dp.png");
+				$("#home").attr("src", "res/jcdc_logo_normal.png");
+			}, delay); 
+			
+			
+			
+		}
+		
+		function showDrawer(evt){
+			$("#drawer").animate({width:"50%"},600);
+			$("#content").slideUp(300).delay( 800 );
+			
+			$("#toggle_drawer").attr("src", "res/ic_close_white_18dp.png");
+			$("#home").attr("src", "res/jcdc_logo_normal_white.png");
+		}
+
+		function generate(evt) {
+			var URL = document.getElementById('url').value;
+
+			$.ajax({
+	            type: "GET",
+	            url: URL,
+	            dataType: "xml",
+	            success: function (xml) { 
+	                result = xml.city;
+	                console.log(result);
+	                document.getElementById("demo").innerHTML = "Paragraph changed!";
+	            },
+	            error: function (xml) {
+	                alert(xml.status + ' ' + xml.statusText);
+	            }
+	        });
+		}
+		
+	</script>
+	
+	
+</head>
+<body>
+	<div id="header">
+		<img id="toggle_drawer" src="res/ic_menu_black_18dp.png" />
+		<a href="" >
+			<img id="home" src="res/jcdc_logo_normal.png" />
+		</a>
+	</div>
+	
+	<div id="content" >
+		<h3>Generate Wallpaper Profile from Google+ Album</h3>
+		<label>
+			Album URL
+			<input type="text" id="url" name="url" style="width:100%;">	
+		</label>
+		<button onclick="generate()">
+			Generate
+		</button>
+		<p id="demo"></p>
+	</div>
+	
+	<footer>
+		<h6 id="footer" >
+			&copy Another Potato Project.
+		</h6>
+	</footer>
+	
+
+	<div id="drawer">
+
+		<div id="drawer_top" > 
+		
+			<div id="links" >
+				<a id="navLinks" href="" > Home </a>
+				<br/><br/>
+				<a id="navLinks" target="_blank" href="https://www.facebook.com/RadioActivePotatoProject" > PotatoInc </a>
+				<br/><br/>
+				<a id="navLinks" target="_blank" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838" > PotatoCM </a>
+			</div>
+		
+		</div>
+		
+		<div id="drawer_bottom" > 
+			<br/><br/>
+			<a id="navLinks" target="_blank" href="https://www.facebook.com/johnchrisdelacruz" > Facebook </a>
+			<br/><br/>
+			<a id="navLinks" target="_blank" href="https://plus.google.com/+JohnChrisDelaCruz69/posts" > Google+ </a>
+			<br/><br/>
+			<a id="navLinks" target="_blank" href="https://github.com/mariozawa" > Github </a>
+			<br/><br/>
+			<a id="navLinks" target="_blank" href="http://forum.xda-developers.com/member.php?u=4715592" > xda-developers </a>
+		</div>
+		
+		
+	</div>
+	
+
+</body>
+
+</html>
