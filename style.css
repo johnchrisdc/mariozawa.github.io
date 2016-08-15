@@ -56,7 +56,7 @@ div#header{
 	width:100%;
 	height:25%;
 	position:absolute;
-	bottom:0;
+	bottom:20;
 	text-align:center;
 }
 
@@ -88,14 +88,14 @@ div#header{
 #lol{
     font-weight: 500;
     letter-spacing: 8px;
-    line-height: 16px;
+    line-height: 20px;
     text-transform: uppercase;
 }
 
 #lolz{
     font-weight: 500;
     letter-spacing: 8px;
-    line-height: 16px;
+    line-height: 20px;
     text-transform: uppercase;
 }
 
