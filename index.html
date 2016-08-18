@@ -1,99 +1,84 @@
 <html>
-
 <head>
-	<title> JCDC </title>
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-	<link rel = "stylesheet" href = "style.css" type = "text/css"/>
-	
-	<link rel="icon" type="image/png" href="res/fav_ico.png">
-	
-	<script type = "text/javascript">
-		$(function(){
-			$("#toggle_drawer").toggle(showDrawer, hideDrawer);
-		});
-		
-		function hideDrawer(evt){
-			$("#drawer").animate({width:"0px"},600);
-			$("#content").slideUp( 300 ).delay(400).fadeIn(400);
-			
-			var delay=400; //1 seconds
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.grey-red.min.css" />
+	<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
 
-			setTimeout(function(){
-			$("#toggle_drawer").attr("src", "res/ic_menu_black_18dp.png");
-				$("#home").attr("src", "res/jcdc_logo_normal.png");
-			}, delay); 
-			
-			
-			
+	<link rel="icon" type="image/png" href="res/fav_ico.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>JCDC</title>
+
+	<style>
+		.demo-layout-transparent {
+		  background: white center / cover;
 		}
-		
-		function showDrawer(evt){
-			$("#drawer").animate({width:"50%"},600);
-			$("#content").slideUp(300).delay( 800 );
-			
-			$("#toggle_drawer").attr("src", "res/ic_close_white_18dp.png");
-			$("#home").attr("src", "res/jcdc_logo_normal_white.png");
+		.demo-layout-transparent .mdl-layout__header,
+		.demo-layout-transparent .mdl-layout__drawer-button {
+		  color: black;
+		  background: white;
 		}
-		
-	</script>
-	
-	
+		.demo-layout-transparent .mdl-layout__drawer {
+		  color: white;
+		  background: #424242;
+		  border-right: none;
+		}
+		#lol{
+		    font-weight: 500;
+		    letter-spacing: 8px;
+		    line-height: 30px;
+		    text-transform: uppercase;
+		}
+
+		#lolz{
+		    font-weight: 500;
+		    letter-spacing: 8px;
+		    line-height: 20px;
+		    text-transform: uppercase;
+		}
+	</style>
+
 </head>
 <body>
-	<div id="header">
-		<img id="toggle_drawer" src="res/ic_menu_black_18dp.png" />
-		<a href="" >
-			<img id="home" src="res/jcdc_logo_normal.png" />
-		</a>
+	<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+	  <header class="mdl-layout__header mdl-layout__header" style="box-shadow:none;">
+	    <div class="mdl-layout__header-row">
+	      <!-- Title -->
+	      <span class="mdl-layout-title"><img src="res/jcdc_logo_normal.png" /></span>
+	      <!-- Add spacer, to align navigation to the right -->
+	      <div class="mdl-layout-spacer"></div>
+	    </div>
+	  </header>
+	  <div class="mdl-layout__drawer">
+	    <span class="mdl-layout-title">Hello World!</span>
+	    <nav class="mdl-navigation">
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://www.facebook.com/RadioActivePotatoProject">POTATOINC</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838">POTATOCM</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://plus.google.com/communities/106151878353754544104/stream/a08126ed-7fd4-4768-a7e8-85c69c60934a">ALL PAPERS</a>
+	    </nav>
+
+	    <hr></hr>
+
+	    <nav class="mdl-navigation">
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://www.facebook.com/johnchrisdelacruz">FACEBOOK</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://plus.google.com/+JohnChrisDelaCruz69/posts">GOOGLE+</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="https://github.com/mariozawa">GITHUB</a>
+	      <a class="mdl-navigation__link" style="color:#EEEEEE;" target="_blank" href="http://forum.xda-developers.com/member.php?u=4715592">XDA-DEVELOPERS</a>
+	    </nav>
+
+	  </div>
+	  <main class="mdl-layout__content">
+	  </main>
 	</div>
-	
-	<div id="content" >
+
+	<div style="width:100%; position:absolute;
+	text-align:center;">
+		<br><br><br><br>
 		<img class="img-responsive" id="dp" src="res/dp.jpg" />
 		<h3 id="lol" > John Chris Dela Cruz </h3>
 		<h5 id="lolz" > Android developer extraordinaire. </h5>
-	</div>
-	
-	<footer>
-		<h6 id="footer" >
-			&copy Another Potato Project.
-		</h6>
-	</footer>
-	
-
-	<div id="drawer">
-
-		<div id="drawer_top" > 
-		
-			<div id="links" >
-				<a id="navLinks" target="_blank" href="https://www.facebook.com/RadioActivePotatoProject" > PotatoInc </a>
-				<br/><br/>
-				<a id="navLinks" target="_blank" href="http://forum.xda-developers.com/galaxy-y/development/rom-t2866838" > PotatoCM </a>
-				<br/><br/>
-				<a id="navLinks" target="_blank" href="https://plus.google.com/communities/106151878353754544104/stream/a08126ed-7fd4-4768-a7e8-85c69c60934a" > All Papers </a>
-			</div>
-		
-		</div>
-		
-		<div id="drawer_bottom" > 
-			<br/><br/><br/>
-			<a id="navLinks" target="_blank" href="https://www.facebook.com/johnchrisdelacruz" > Facebook </a>
-			<br/><br/>
-			<a id="navLinks" target="_blank" href="https://plus.google.com/+JohnChrisDelaCruz69/posts" > Google+ </a>
-			<br/><br/>
-			<a id="navLinks" target="_blank" href="https://github.com/mariozawa" > Github </a>
-			<br/><br/>
-			<a id="navLinks" target="_blank" href="http://forum.xda-developers.com/member.php?u=4715592" > xda-developers </a>
-		</div>
-		
-		
-	</div>
-	
+  	</div>
 
 </body>
-
 </html>
